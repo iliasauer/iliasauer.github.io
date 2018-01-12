@@ -1,24 +1,24 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [
   {
     entry: {
-      default: ['./lib/default.js'],
-      homework1: ['./lib/homework1.js'],
-      homework2BarChart: ['./lib/homework2BarChart.js'],
-      homework2Table: ['./lib/homework2Table.js'],
-      project: ['./lib/project.js'],
+      app: './lib/main.js',
     },
-    plugins: [
-      new CleanWebpackPlugin(['build']),
-    ],
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].js',
+      filename: 'bundle.js',
       publicPath: '/assets/',
     },
     devtool: 'inline-source-map',
+    plugins: [
+      new CleanWebpackPlugin(['build']),
+      new ExtractTextPlugin({
+        filename: 'style.css',
+      }),
+    ],
     module: {
       rules: [
         {
@@ -31,12 +31,22 @@ module.exports = [
           loader: 'json-loader',
         },
         {
-          test: /\.css$/,
-          loader: 'style-loader!css-loader',
+          test: /\.scss$/,
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              {
+                loader: 'css-loader',
+              },
+              {
+                loader: 'sass-loader',
+              },
+            ],
+          }),
         },
         {
           test: /\.ttf$/,
-          loader: 'url-loader?limit=100000',
+          loader: 'file?name=font/[name].[ext]',
         },
       ],
     },

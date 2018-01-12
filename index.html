@@ -2,21 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>I. Kisliakovskii, BioMed team</title>
+    <title>BioMed team</title>
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <script src="/build/default.js"></script>
+    <link rel='stylesheet' href='build/style.css'>
 </head>
 <body>
-<div class="container">
-    <div class="greeting">
-        <h1>HPC Visualization. I. Kisliakovskii. BioMed team.</h1>
-        <nav>
-            <ul>
-                <li><a href="/homework1">Homework 1</a></li>
-                <li><a href="/homework2">Homework 2</a></li>
-            </ul>
-        </nav>
+<h1>Clusters of patients' pathways</h1>
+<div id="main row" class="view">
+    <div id="menu" class="view column left">
+        <span id="algorithm-menu"></span>
+        <span id="patients-menu" class="menu hidden">
+            <span id="slider">
+                <span id="min-time">0%</span> <input type="range" min="0" max="100" value="0" step="1" class="slider" id="sliderik"> <span id="max-time">100%</span>
+            </span><br>
+            <span id="patient-combo">
+                 <select id="patients" name="patients">
+                      <option id="default-combo" disabled selected value="null">Choose a patient...</option>
+                 </select>
+            </span>
+        </span>
+    </div>
+    <div id="content" class="view column right">
+        <span id="clusters"></span>
+        <span id="clinical-path"></span>
+        <span id="histogram"></span>
     </div>
 </div>
+<script src="build/bundle.js"></script>
 </body>
 </html>

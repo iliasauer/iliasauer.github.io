@@ -1,0 +1,188 @@
+@import "combo", "slider";
+
+$icColor: #69F0AE;
+$ccColor: #B39DDB;
+$adOdColor: #FFE082;
+$cdColor: #E6EE9C;
+$orColor: #00B0FF;
+$adColor: #FFCDD2;
+
+.content {
+  display: block;
+  width: 80%;
+  height: 70%;
+
+  .hist {
+    display: block;
+    width: 400px;
+    height: 30%;
+  }
+}
+
+.menu {
+  display: block;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  fill: #F5F5F5;
+  min-width: 110px;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  stroke-width: 1px;
+  stroke: #919191;
+  cursor: pointer;
+
+  &.selected {
+    fill: #60737d;;
+  }
+
+  &-text {
+    text-anchor: middle;
+    dominant-baseline: central;
+    font: 700 12px/1 'Open Sans', sans-serif;
+    fill: #BDBDBD;
+  }
+}
+
+.node {
+  display: inline-block;
+  min-width: 110px;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  stroke-width: 1px;
+  stroke: #212121;
+  cursor: pointer;
+
+  &-sink {
+    display: inline-block;
+    fill: #F5F5F5;
+    min-width: 110px;
+    margin: 15px 5px;
+    padding: 10px 15px 12px;
+    stroke-width: 1px;
+    stroke: #212121;
+    cursor: pointer;
+  }
+
+  &-text {
+    text-anchor: middle;
+    dominant-baseline: central;
+    font: 700 12px/1 'Open Sans', sans-serif;
+    fill: #212121;
+  }
+}
+
+.IC{
+  fill: $icColor;
+}
+
+.CC{
+  fill: $ccColor;
+}
+
+.AD-OD{
+  fill: $adOdColor;
+}
+
+.CD{
+  fill: $cdColor;
+}
+
+.OR{
+  fill: $orColor;
+}
+
+.AD{
+  fill: $adColor;
+}
+
+.cluster {
+  fill: #90A4AE;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  stroke-width: 1px;
+  stroke: #919191;
+  cursor: pointer;
+
+  &-text {
+    text-anchor: middle;
+    dominant-baseline: central;
+    font: 700 20px/1 'Open Sans', sans-serif;
+    fill: #fff;
+  }
+}
+
+.invisible {
+  fill: #fff;
+}
+
+.shadowed {
+  filter: url(#drop-shadow);
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 70%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.link {
+  fill: none;
+  stroke: black;
+  stroke-width: 0px;
+
+  &.bold {
+    stroke-width: 1px;
+  }
+
+  &.licensing {
+    stroke: green;
+  }
+
+  &.resolved {
+    stroke-dasharray: 0,2 1;
+  }
+
+  &.patient-selected {
+    stroke: #FFB900;
+    stroke-width: 3;
+
+    &.sinked {
+      stroke: #FFB900;
+      stroke-width: 3;
+    }
+  }
+
+  &.sinked {
+    stroke: #9C27B0;
+    stroke-width: 3;
+  }
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+.nodes circle {
+  stroke: #000000;
+  stroke-width: 1px;
+}
