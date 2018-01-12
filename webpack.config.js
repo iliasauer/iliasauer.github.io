@@ -3,8 +3,10 @@ const path = require('path');
 module.exports = [
   {
     entry: {
+      default: ['./lib/default.js'],
       homework1: ['./lib/homework1.js'],
-      homework2: ['./lib/homework1.js'],
+      homework2BarChart: ['./lib/homework2BarChart.js'],
+      homework2Table: ['./lib/homework2Table.js'],
       project: ['./lib/project.js'],
     },
     output: {
@@ -27,6 +29,10 @@ module.exports = [
         {
           test: /\.css$/,
           loader: 'style-loader!css-loader',
+        },
+        {
+          test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+          use: 'file-loader',
         },
       ],
     },
