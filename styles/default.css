@@ -1,0 +1,29 @@
+html {
+    /*noinspection CssNoGenericFontName*/
+    font-family: 'OpenSans' !important;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/Open_Sans/OpenSans-Regular.ttf');
+}
+
+.greeting {
+    margin: 60px auto;
+    width: 70%;
+}
+
+.greeting p, .greeting ul {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: rgb(51, 51, 51);
+}
+
+.greeting a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+
+.greeting a:hover {
+    text-decoration: underline;
+}

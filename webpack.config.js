@@ -1,32 +1,34 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = [
-    {
-        entry: {
-            app: ["./lib/main.js"]
+  {
+    entry: {
+      homework1: ['./lib/homework1.js'],
+      homework2: ['./lib/homework1.js'],
+      project: ['./lib/project.js'],
+    },
+    output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: '[name].js',
+      publicPath: '/assets/',
+    },
+    devtool: 'inline-source-map',
+    module: {
+      rules: [
+        {
+          test: /\.js?$/,
+          exclude: [/(node_modules|bower_components)/],
+          loader: 'babel-loader',
         },
-        output: {
-            path: path.resolve(__dirname, "build"),
-            filename: "bundle.js",
-            publicPath: "/assets/"
+        {
+          test: /\.json$/,
+          loader: 'json-loader',
         },
-        devtool: "inline-source-map",
-        module: {
-            rules: [
-                {
-                    test: /\.js?$/,
-                    exclude: [/(node_modules|bower_components)/],
-                    loader: "babel-loader"
-                },
-                {
-                    test: /\.json$/,
-                    loader: "json-loader"
-                },
-                {
-                    test: /\.css$/,
-                    loader: "style-loader!css-loader"
-                }
-            ]
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader',
         },
-    }
+      ],
+    },
+  },
 ];
