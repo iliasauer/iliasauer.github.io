@@ -31,8 +31,8 @@ module.exports = [
           loader: 'style-loader!css-loader',
         },
         {
-          test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-          use: 'file-loader',
+          test: /\.ttf$/,
+          loader: 'url-loader?limit=100000',
         },
       ],
     },
