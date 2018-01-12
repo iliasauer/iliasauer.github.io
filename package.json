@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/kisliakovsky/dThree#readme",
   "dependencies": {
+    "clean-webpack-plugin": "^0.1.17",
     "d3-array": "^1.2.1",
     "d3-axis": "^1.0.8",
     "d3-chord": "^1.0.4",

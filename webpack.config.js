@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = [
   {
@@ -9,6 +10,9 @@ module.exports = [
       homework2Table: ['./lib/homework2Table.js'],
       project: ['./lib/project.js'],
     },
+    plugins: [
+      new CleanWebpackPlugin(['build']),
+    ],
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: '[name].js',
