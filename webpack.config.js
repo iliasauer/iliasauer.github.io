@@ -10,7 +10,7 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'bundle.js',
-      publicPath: '/assets/',
+      publicPath: '/build/',
     },
     devtool: 'inline-source-map',
     plugins: [
