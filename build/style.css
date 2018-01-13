@@ -185,4 +185,8 @@ svg:not(.active):not(.ctrl) path.link {
   font: bold 16px/1 'Open Sans', sans-serif;
   text-transform: uppercase; }
 
+.pathways-header {
+  font: bold 16px/1 'Open Sans', sans-serif;
+  text-transform: uppercase; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
