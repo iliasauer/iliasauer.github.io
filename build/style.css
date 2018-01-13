@@ -189,4 +189,12 @@ svg:not(.active):not(.ctrl) path.link {
   font: bold 16px/1 'Open Sans', sans-serif;
   text-transform: uppercase; }
 
+.tooltip {
+  line-height: 1;
+  padding: 6px;
+  background: #BDBDBD;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0.8; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

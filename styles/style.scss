@@ -6,6 +6,7 @@ $orColor: #00B0FF;
 $adColor: #FFCDD2;
 
 $selectedColor: #60737d;
+$baseColor: #BDBDBD;
 
 .content {
   display: block;
@@ -46,7 +47,7 @@ $selectedColor: #60737d;
     text-anchor: middle;
     dominant-baseline: central;
     font: 700 12px/1 'Open Sans', sans-serif;
-    fill: #BDBDBD;
+    fill: $baseColor;
     cursor: pointer;
   }
 }
@@ -255,5 +256,13 @@ svg:not(.active):not(.ctrl) path.link {
   text-transform: uppercase;
 }
 
-
-
+.tooltip {
+  line-height: 1;
+  padding: 6px;
+  background: $baseColor;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0.8;
+  &-container {
+  }
+}
