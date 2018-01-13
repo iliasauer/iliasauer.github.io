@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BioMed team</title>
+    <title>Clustering of Clinical Pathways</title>
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' href='build/style.css'>
 </head>
 <body>
-<h1>Clusters of patients' pathways</h1>
 <div id="main row" class="view">
     <div id="menu" class="view column left">
         <span id="algorithm-menu"></span>
         <span id="patients-menu" class="menu hidden">
             <span id="slider">
-                <span id="min-time">0%</span> <input type="range" min="0" max="100" value="0" step="1" class="slider" id="sliderik"> <span id="max-time">100%</span>
+                <input type="range" min="0" max="100" value="0" step="1" class="slider" id="sliderik">
             </span><br>
             <span id="patient-combo">
-                 <select id="patients" name="patients">
-                      <option id="default-combo" disabled selected value="null">Choose a patient...</option>
-                 </select>
+                <label for="patients"></label>
+                <select id="patients" name="patients" class="form-control">
+                    <option id="default-combo" disabled selected value="null">Choose a patient...</option>
+                </select>
             </span>
         </span>
     </div>

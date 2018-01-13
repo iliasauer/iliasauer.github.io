@@ -1,11 +1,11 @@
-@import "combo", "slider";
-
 $icColor: #69F0AE;
 $ccColor: #B39DDB;
 $adOdColor: #FFE082;
 $cdColor: #E6EE9C;
 $orColor: #00B0FF;
 $adColor: #FFCDD2;
+
+$selectedColor: #60737d;
 
 .content {
   display: block;
@@ -39,7 +39,7 @@ $adColor: #FFCDD2;
   cursor: pointer;
 
   &.selected {
-    fill: #60737d;;
+    fill: $selectedColor;;
   }
 
   &-text {
@@ -116,6 +116,7 @@ $adColor: #FFCDD2;
     dominant-baseline: central;
     font: 700 20px/1 'Open Sans', sans-serif;
     fill: #fff;
+    cursor: pointer;
   }
 }
 
@@ -187,3 +188,67 @@ svg:not(.active):not(.ctrl) path.link {
   stroke: #000000;
   stroke-width: 1px;
 }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background: #fff none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+  }
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: $selectedColor;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: $selectedColor;
+    cursor: pointer;
+  }
+}
+
+.menu-header {
+  font: bold 16px/1 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.clusters-header {
+  font: bold 16px/1 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+
+
