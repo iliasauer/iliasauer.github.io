@@ -118,7 +118,8 @@ input[type=range] {
     text-anchor: middle;
     dominant-baseline: central;
     font: 700 12px/1 'Open Sans', sans-serif;
-    fill: #BDBDBD; }
+    fill: #BDBDBD;
+    cursor: pointer; }
 
 .node {
   display: inline-block;
