@@ -222,6 +222,7 @@ svg:not(.active):not(.ctrl) path.link {
   outline: none;
   opacity: 0.7;
   transition: opacity .2s;
+  margin-left: 0;
 
   &:hover {
     opacity: 1;
