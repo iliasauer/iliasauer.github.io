@@ -1,6 +1,8 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = [
   {
@@ -12,12 +14,15 @@ module.exports = [
       filename: 'bundle.js',
       publicPath: '/build/',
     },
-    devtool: 'inline-source-map',
+    // devtool: 'inline-source-map',
     plugins: [
       new CleanWebpackPlugin(['build']),
       new ExtractTextPlugin({
         filename: 'style.css',
       }),
+      new UglifyJsPlugin({
+      }),
+      new MinifyPlugin(),
     ],
     module: {
       rules: [
