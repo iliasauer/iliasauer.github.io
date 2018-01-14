@@ -9,18 +9,18 @@
 <body>
 <div id="main row" class="view">
     <div id="menu" class="view column left">
-        <span id="algorithm-menu"></span>
-        <span id="patients-menu" class="menu hidden">
-            <span id="slider">
+        <div id="algorithm-menu"></div>
+        <div id="patients-menu" class="menu hidden">
+            <div id="slider">
                 <input type="range" min="0" max="100" value="0" step="1" class="slider" id="sliderik">
-            </span><br>
-            <span id="patient-combo">
+            </div>
+            <div id="patient-combo">
                 <label for="patients"></label>
                 <select id="patients" name="patients" class="form-control">
                     <option id="default-combo" disabled selected value="null">Choose a patient...</option>
                 </select>
-            </span>
-        </span>
+            </div>
+        </div>
     </div>
     <div id="content" class="view column right">
         <span id="clusters"></span>
