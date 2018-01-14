@@ -20,8 +20,7 @@ module.exports = [
       new ExtractTextPlugin({
         filename: 'style.css',
       }),
-      new UglifyJsPlugin({
-      }),
+      new UglifyJsPlugin(),
       new MinifyPlugin(),
     ],
     module: {

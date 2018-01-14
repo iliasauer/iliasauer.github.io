@@ -158,12 +158,13 @@ svg:not(.active):not(.ctrl) path.link {
 .slider {
   -webkit-appearance: none;
   width: 100%;
+  display: block;
   height: 25px;
   background: #d3d3d3;
   outline: none;
-  opacity: 0.7;
   transition: opacity .2s;
-  margin-left: 0; }
+  margin-left: 0;
+  pointer-events: none; }
   .slider:hover {
     opacity: 1; }
   .slider::-webkit-slider-thumb {
@@ -172,12 +173,24 @@ svg:not(.active):not(.ctrl) path.link {
     width: 25px;
     height: 25px;
     background: #60737d;
-    cursor: pointer; }
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 1;
+    outline: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: #60737d;
-    cursor: pointer; }
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 1;
+    outline: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .slider + .slider {
+    margin-top: -25px; }
 
 .menu-header {
   font: bold 16px/1 'Open Sans', sans-serif;
@@ -199,3 +212,7 @@ svg:not(.active):not(.ctrl) path.link {
   font-size: 12px; }
   .tooltip-bar {
     fill: #4682B4; }
+
+label {
+  font: bold 13px/1 'Open Sans', sans-serif;
+  text-transform: uppercase; }
