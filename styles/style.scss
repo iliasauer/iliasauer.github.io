@@ -218,6 +218,7 @@ svg:not(.active):not(.ctrl) path.link {
 }
 .slider {
   -webkit-appearance: none;
+  -moz-appearance: none;
   width: 100%;
   display: block;
   height: 25px;
@@ -258,10 +259,15 @@ svg:not(.active):not(.ctrl) path.link {
     margin-bottom: 0;
   }
 
+  &::-moz-range-track {
+    visibility: hidden;
+  }
+
   & + .slider {
     margin-top: $multiRangeHeight * -1;
   }
 }
+
 
 
 //@mixin multirange-thumb {
